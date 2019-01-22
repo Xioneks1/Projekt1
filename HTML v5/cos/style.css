@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Nagłówek */
+.header {
+	background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 3 kolumny */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* lewa i prawa kolumna */
+.column.side {
+    width: 25%;
+}
+
+/* Środkowa kolumna */
+.column.middle {
+    width: 50%;
+}
+
+/* Usuń wolne miejsca po kolumnach */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Robi że jak będzie mniejszy ekran to kolumny będą pokazywać się na sobie */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+/* Stópka */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
